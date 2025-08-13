@@ -1,11 +1,3 @@
-<?php
-session_start();
-if (empty($_SESSION['user'])) {
-  header("Location: login.php");
-  exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -38,7 +30,7 @@ if (empty($_SESSION['user'])) {
 							<div class="user_status_comes_here hide_on_mobile">Online</div>
 						</div>
 						<div class="logout_btn_container col-4">
-  <a href="logout.php" class="logout btn btn-dark">Logout</a>
+							<button class="logout btn btn-dark">Logout</button>
 						</div>
 					</div>
 				</div>
@@ -94,12 +86,6 @@ if (empty($_SESSION['user'])) {
 				</form>
 			</div>		
 		</div>
-		<script>
-  window.SERVER = {
-    loggedIn: <?php echo empty($_SESSION['user']) ? 'false' : 'true'; ?>,
-    username: <?php echo empty($_SESSION['user']) ? 'null' : '"'.htmlspecialchars($_SESSION['user']).'"'; ?>
-  };
-</script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		

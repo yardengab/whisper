@@ -1,0 +1,15 @@
+[13-Aug-2025 17:00:01 Asia/Jerusalem] 2025-08-13 17:00:01It seems that MYSQL server details, user, password is not set
+[13-Aug-2025 17:00:01 Asia/Jerusalem] [INCLUDE FAILED] [3876239876478392764328765832546] Message: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, bool given | File: C:\xampp\htdocs\home-test\modules\mysql.php | Line: 208 | Module: mysql | Trace: #0 C:\xampp\htdocs\home-test\modules\mysql.php(208): mysqli_query(false, 'SELECT NOW();')
+#1 C:\xampp\htdocs\home-test\modules\mysql.php(297): mysql_query('SELECT NOW();', false)
+#2 C:\xampp\htdocs\home-test\modules\mysql.php(374): mysql_fetch_array('SELECT NOW();')
+#3 C:\xampp\htdocs\home-test\app_init.php(58): require_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\home-test\app_init.php(133): include_module('mysql')
+#5 C:\xampp\htdocs\home-test\config.php(81): include_all_modules()
+#6 C:\xampp\htdocs\home-test\api.php(6): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+[13-Aug-2025 17:00:01 Asia/Jerusalem] 
+			[2025-08-13 17:00:01]
+			UNCAUGHT EXCEPTION: Call to a member function prepare() on bool
+			in C:\xampp\htdocs\home-test\modules\mysql.php
+			on line 150
+
